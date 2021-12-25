@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/generalstoretabicon.png</file>
+        <file>images/generalstoretabiconHL.png</file>
+        <file>images/kitstabicon.png</file>
+        <file>images/kitstabiconHL.png</file>
+        <file>images/addStoreItemButtonIcon.png</file>
+        <file>images/editStoreItemButtonIcon.png</file>
+        <file>images/removeStoreItemButtonIcon.png</file>
+        <file>images/alertIcon.png</file>
+        <file>images/saveIconHover.png</file>
+        <file>images/saveIconIdle.png</file>
+        <file>images/saveIconPressed.png</file>
+        <file>images/ApplicationIcon.ico</file>
+        <file>images/ApplicationIcon.png</file>
+    </qresource>
+</RCC>

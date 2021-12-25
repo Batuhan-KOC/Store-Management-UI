@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EnsureDialog</class>
+ <widget class="QDialog" name="EnsureDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>436</width>
+    <height>115</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Remove</string>
+  </property>
+  <widget class="QLabel" name="LabelStoreItemName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>521</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Mono</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Are you sure?</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>441</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid white;
+background-color: rgb(235, 235, 235);
+border-radius: 8px;</string>
+   </property>
+   <widget class="QPushButton" name="CancelButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>60</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string>No</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="AcceptButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+   </property>
+   <property name="text">
+    <string>Yes</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>25</width>
+     <height>25</height>
+    </size>
+   </property>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>LabelStoreItemName</zorder>
+  <zorder>AcceptButton</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

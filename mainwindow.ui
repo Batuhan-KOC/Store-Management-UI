@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Store Management System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+	background-color: rgb(47, 47, 47);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1901</width>
+      <height>981</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Mono</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background: rgb(245, 245, 245);; 
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+} 
+
+QTabBar::tab {
+  background: rgb(230, 230, 230); 
+  border: 1px solid lightgray; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  min-width: 150ex;
+  padding: 6px;
+padding-left : 5px;
+padding-right: 300px;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(245, 245, 245); 
+  margin-bottom: -1px; 
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/images/generalstoretabicon.png</normaloff>
+       <normalon>:/images/generalstoretabiconHL.png</normalon>
+       <activeoff>:/images/generalstoretabicon.png</activeoff>
+       <selectedoff>:/images/generalstoretabicon.png</selectedoff>
+       <selectedon>:/images/generalstoretabiconHL.png</selectedon>:/images/generalstoretabicon.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>                    GENERAL STORE</string>
+     </attribute>
+     <widget class="QTableWidget" name="GeneralStoreList">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>1181</width>
+        <height>871</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-family: Noto Mono;
+selection-background-color: rgba(226, 71, 71, 120);</string>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>296</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Store Item</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Unit</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Unit Cost</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="ListBackground" native="true">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>24</y>
+        <width>1193</width>
+        <height>884</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47,47,47);
+background-color: rgb(226, 71, 71);
+border: 1px solid rgb(47,47,47);
+border-radius: 8px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelStoreItemName">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>140</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Store Item Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EditStoreItemName">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>180</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;
+border-radius: 6px;
+padding-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Item Not Selected</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelUnit">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>240</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Unit</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EditUnit">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>280</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;
+border-radius: 6px;
+padding-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Item Not Selected</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelUnitCost">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>340</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Unit Cost</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EditUnitCost">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>380</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;
+border-radius: 6px;
+padding-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Item Not Selected</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelDescription">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>440</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Description</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EditDescription">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>480</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;
+border-radius: 6px;
+padding-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Item Not Selected</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AddItemButton">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>545</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>   Add Item</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveItemButton">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>635</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>   Remove Item</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="EditItemButton">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>725</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>   Edit Item</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>540</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/addStoreItemButtonIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>720</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/editStoreItemButtonIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>630</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/removeStoreItemButtonIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AlertLabel">
+      <property name="geometry">
+       <rect>
+        <x>1870</x>
+        <y>900</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/alertIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SaveButton">
+      <property name="geometry">
+       <rect>
+        <x>1845</x>
+        <y>10</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border-image: url(:/images/saveIconIdle.png) 0 0 0 0 0.5 0.5;
+}
+QPushButton:hover {
+border-image: url(:/images/saveIconHover.png) 0 0 0 0 0.5 0.5;
+}
+QPushButton:pressed {
+border-image: url(:/images/saveIconPressed.png) 0 0 0 0 0.5 0.5;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AlertText">
+      <property name="geometry">
+       <rect>
+        <x>1730</x>
+        <y>903</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Pixeloid Sans</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:red;</string>
+      </property>
+      <property name="text">
+       <string>Unsaved Changes!</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelSave">
+      <property name="geometry">
+       <rect>
+        <x>1840</x>
+        <y>53</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Pixeloid Sans</family>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>ListBackground</zorder>
+     <zorder>GeneralStoreList</zorder>
+     <zorder>LabelStoreItemName</zorder>
+     <zorder>EditStoreItemName</zorder>
+     <zorder>LabelUnit</zorder>
+     <zorder>EditUnit</zorder>
+     <zorder>LabelUnitCost</zorder>
+     <zorder>EditUnitCost</zorder>
+     <zorder>LabelDescription</zorder>
+     <zorder>EditDescription</zorder>
+     <zorder>AddItemButton</zorder>
+     <zorder>RemoveItemButton</zorder>
+     <zorder>EditItemButton</zorder>
+     <zorder>label</zorder>
+     <zorder>label_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>AlertLabel</zorder>
+     <zorder>SaveButton</zorder>
+     <zorder>AlertText</zorder>
+     <zorder>LabelSave</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/images/kitstabicon.png</normaloff>
+       <normalon>:/images/kitstabiconHL.png</normalon>:/images/kitstabicon.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>                       KITS</string>
+     </attribute>
+     <widget class="QTableWidget" name="KitContentList">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>20</y>
+        <width>521</width>
+        <height>881</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-family: Noto Mono;
+selection-background-color: rgba(226, 71, 71, 120);</string>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>175</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Store Item</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Amount</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cost</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="ListBackground_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>664</x>
+        <y>13</y>
+        <width>533</width>
+        <height>896</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47,47,47);
+background-color: rgb(226, 71, 71);
+border: 1px solid rgb(47,47,47);
+border-radius: 8px;</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="KitList">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>20</y>
+        <width>521</width>
+        <height>881</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-family: Noto Mono;
+selection-background-color: rgba(226, 71, 71, 120);</string>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>520</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Kit Name</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="ListBackground_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>54</x>
+        <y>14</y>
+        <width>533</width>
+        <height>894</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47,47,47);
+background-color: rgb(226, 71, 71);
+border: 1px solid rgb(47,47,47);
+border-radius: 8px;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EditKitName">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>60</y>
+        <width>611</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;
+border-radius: 6px;
+padding-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Item Not Selected</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelKitName">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>20</y>
+        <width>611</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Kit Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelKitTotalCost">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>120</y>
+        <width>611</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Kit Total Cost</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EditKitTotalCost">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>160</y>
+        <width>611</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;
+border-radius: 6px;
+padding-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Item Not Selected</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveKitButton">
+      <property name="geometry">
+       <rect>
+        <x>1340</x>
+        <y>725</y>
+        <width>541</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>   Remove Kit</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AddKitButton">
+      <property name="geometry">
+       <rect>
+        <x>1340</x>
+        <y>635</y>
+        <width>541</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>   Add Kit</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="StoreItemSelect">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>340</y>
+        <width>561</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border: 2px solid black;
+    border-radius: 8px;
+	padding-left : 8px;
+	font-family: Noto Mono;
+	font-size: 18px;
+}
+
+QComboBox::drop-down {
+	border: 2px solid black;
+	border-radius: 16px
+	font-family: Noto Mono;
+	font-size: 18px;
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Default Store Item</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDoubleSpinBox" name="StoreItemAmountSelect">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>420</y>
+        <width>561</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDoubleSpinBox {
+	border: 2px solid black;
+	border-radius: 8px;
+	font-family: Noto Mono;
+	font-size: 18px;
+}</string>
+      </property>
+      <property name="decimals">
+       <number>4</number>
+      </property>
+      <property name="maximum">
+       <double>999999999.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AddStoreItemButton">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>510</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Add Store Item</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveSelectedStoreItemButton">
+      <property name="geometry">
+       <rect>
+        <x>1500</x>
+        <y>510</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Remove Selected Store Item</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QWidget" name="ListBackground_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>230</y>
+        <width>601</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(47,47,47);
+border-radius: 8px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelKitTotalCost_2">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>240</y>
+        <width>551</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Kit Edit </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelKitTotalCost_3">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>300</y>
+        <width>551</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select Store Item</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelKitTotalCost_4">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>380</y>
+        <width>551</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select Amount</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>720</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/removeStoreItemButtonIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>810</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/editStoreItemButtonIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>630</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="icons.qrc">:/images/addStoreItemButtonIcon.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="EditKitButton">
+      <property name="geometry">
+       <rect>
+        <x>1340</x>
+        <y>815</y>
+        <width>541</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: rgba(220, 0, 0, 180);
+}
+QPushButton:hover {
+	background-color: rgba(180, 0, 0, 200);
+}
+QPushButton:pressed {
+	background-color: rgba(140, 0, 0, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Edit Kit</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>ListBackground_4</zorder>
+     <zorder>ListBackground_3</zorder>
+     <zorder>ListBackground_2</zorder>
+     <zorder>KitContentList</zorder>
+     <zorder>KitList</zorder>
+     <zorder>EditKitName</zorder>
+     <zorder>LabelKitName</zorder>
+     <zorder>LabelKitTotalCost</zorder>
+     <zorder>EditKitTotalCost</zorder>
+     <zorder>RemoveKitButton</zorder>
+     <zorder>AddKitButton</zorder>
+     <zorder>StoreItemSelect</zorder>
+     <zorder>StoreItemAmountSelect</zorder>
+     <zorder>AddStoreItemButton</zorder>
+     <zorder>RemoveSelectedStoreItemButton</zorder>
+     <zorder>LabelKitTotalCost_2</zorder>
+     <zorder>LabelKitTotalCost_3</zorder>
+     <zorder>LabelKitTotalCost_4</zorder>
+     <zorder>label_4</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_6</zorder>
+     <zorder>EditKitButton</zorder>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
